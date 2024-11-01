@@ -270,8 +270,8 @@ check_status() {
     if [[ ! -f /etc/systemd/system/x-ui.service ]]; then
         return 2
     fi
-    temp=$(systemctl status x-ui | grep Active | awk '{print \$3}' | cut -d "(" -f2 | cut -d ")" -f1)
-    if ([[ x"${temp}" == x"running" ]]); then
+    temp=$(systemctl status x-ui | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+    if [[ x"${temp}" == x"running" ]]; then
         return 0
     else
         return 1
