@@ -72,7 +72,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://github.com/DuskPagoda/x-ui/new/main/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/DuskPagoda/x-ui/main/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
